@@ -1,5 +1,5 @@
 from setuptools import find_packages, setup
-from ptrait import __version__
+from pytest_util import __version__
 
 setup(name='p_pytest_util',
       version=__version__,
