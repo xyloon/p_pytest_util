@@ -1,11 +1,11 @@
 from setuptools import find_packages, setup
-from pytest_util import __version__
+from pytest_assertutil import __version__
 
-setup(name='p_pytest_util',
+setup(name='pytest-assertutil',
       version=__version__,
-      description='p_pytest_util',
+      description='pytest-assertutil',
       long_description='',
-      url='https://github.com/xyloon/p_pytest_util',
+      url='https://github.com/xyloon/pytest-assertutil',
       author='xyloon',
       author_email='xyloon@gmail.com',
       license='MIT',
