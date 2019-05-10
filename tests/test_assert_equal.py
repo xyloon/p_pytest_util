@@ -1,4 +1,5 @@
 from pytest_assertutil import assert_equal
+from fractions import Fraction
 import pytest
 
 
@@ -56,6 +57,23 @@ def test_assert_equal_complex_shuffled():
         {
             11: (20, [{17: 18, 15: 16}, 13, 14], 19, 12),
             1: (2, [3, 4, {5: 6, 7: 8}], 9, 10)
+        }
+    )
+
+
+def test_fraction_class():
+    assert_equal(Fraction(2, 5), Fraction(2, 5))
+
+
+def test_assert_equal_complex_shuffled_with_fraction():
+    assert_equal(
+        {
+            1: (2, [3, 4, {5: 6, 7: 8}], 9, 10, Fraction(2, 5)),
+            11: (12, [13, 14, {15: 16, 17: 18}], 19, 20)
+        },
+        {
+            11: (20, [{17: 18, 15: 16}, 13, 14], 19, 12),
+            1: (2, [3, 4, {5: 6, 7: 8}], 9, 10, Fraction(2, 5))
         }
     )
 

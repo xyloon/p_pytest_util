@@ -15,7 +15,7 @@ def multitype_key(v):
         return "c%s" % str(v)
     if isinstance(v, dict):
         return "d%s" % str(v)
-    raise Exception("Not supported type")
+    return str(v)
 
 
 def assert_equal(target, answer):
